@@ -2,10 +2,10 @@ package br.com.mjv.register.models;
 
 import br.com.mjv.register.models.Enums.NivelEnum;
 
-public class HabilidadesModel {
+public class HabilidadeModel {
      private String nome;
      private NivelEnum nivel;
-    public HabilidadesModel(String nome, NivelEnum nivel) {
+    public HabilidadeModel(String nome, NivelEnum nivel) {
         this.nome = nome;
         this.nivel = nivel;
     }
@@ -20,6 +20,10 @@ public class HabilidadesModel {
     }
     public void setNivel(NivelEnum nivel) {
         this.nivel = nivel;
+    }
+    @Override
+    public String toString() {
+        return nome + ";" + nivel;
     }
     
 }

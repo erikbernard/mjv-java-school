@@ -7,25 +7,16 @@ public class ProfissaoModel {
     private boolean empregoAtual;
     
     public ProfissaoModel(String profissao, String empresa, Double salario, boolean empregoAtual) {
-        this.profissao = profissao;
-        this.empresa = empresa;
-        this.salario = salario;
-        this.empregoAtual = empregoAtual;
-    }
-    public String getProfissao() {
-        return profissao;
+        setProfissao(profissao);
+        setEmpresa(empresa);
+        setSalario(salario);
+        setEmpregoAtual(empregoAtual);
     }
     public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
-    public String getEmpresa() {
-        return empresa;
-    }
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
-    }
-    public Double getSalario() {
-        return salario;
     }
     public void setSalario(Double salario) {
         this.salario = salario;
@@ -35,5 +26,18 @@ public class ProfissaoModel {
     }
     public void setEmpregoAtual(boolean empregoAtual) {
         this.empregoAtual = empregoAtual;
+    }
+
+    @Override
+    public String toString() {
+        return profissao + "," + empresa + "," + salario+ "," + empregoAtual;
+    }
+
+    String formatarValor(String valor) {
+        valor = valor.replaceAll("[^\\d.]", "");
+        while (valor.length() < 10) {
+            valor = "0" + valor;
+        }
+        return valor;
     }
 }

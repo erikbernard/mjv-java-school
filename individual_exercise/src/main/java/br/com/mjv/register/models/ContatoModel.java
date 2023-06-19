@@ -30,4 +30,8 @@ public class ContatoModel {
         this.celularWhatsApp = celularWhatsApp;
         this.celular = celular;
     }
+    @Override
+    public String toString() {
+        return email + "," + telefone + "," + celular + "," + celularWhatsApp;
+    }
 }
