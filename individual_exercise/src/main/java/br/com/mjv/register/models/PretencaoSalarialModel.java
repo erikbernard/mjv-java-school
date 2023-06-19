@@ -26,5 +26,15 @@ public class PretencaoSalarialModel {
         }
         this.maximo = minimo+1.00;
     }
+    
+    @Override
+    public String toString() {
+        return formatar(minimo) + "," + formatar(maximo);
+    }
+
+    private String formatar(double valor) {
+        return String.format("%.2f", valor);
+    }
+
 
 }
